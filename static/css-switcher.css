@@ -3,11 +3,17 @@
     background: rgba(208, 208, 208, 0.8);
     border-width: 0 0 1px 0;
     border: 1px solid #9c9c9c;
-    padding: 10px;
     position: absolute;
     right: 0;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toolbar > div {
+  padding: 10px;
 }
 
 #toolbar * {
@@ -44,6 +50,7 @@
     border: 1px solid #9c9c9c;
     border-radius: 4px;
     margin: 0;
+    min-width: 300px;
     max-width: 50%;
     padding: 10px 10px 10px 20px;
     text-transform: capitalize;
@@ -55,4 +62,11 @@
     outline-style: auto;
     outline-color: Highlight;
     outline-color: -webkit-focus-ring-color;
+}
+
+#toolbar a {
+  cursor: pointer;
+  color: #061DE4;
+  display: inline-block;
+  margin-right: 10px;
 }
