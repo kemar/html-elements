@@ -155,15 +155,12 @@ let setActiveStyleSheet = function (title) {
 
 let toolbar = document.createElement('div')
 toolbar.id = 'toolbar'
-toolbar.innerHTML = `<div>
-    <label for="switch-css">Switch CSS</label>
-    <select id="switch-css">
-        <option value="">User Agent Style Sheet</option>
-    </select>
-  </div>
-  <div>
-    <a href="https://github.com/kemar/html-elements">GitHub</a>
-  </div>`
+toolbar.innerHTML = `
+  <label for="switch-css">Switch CSS</label>
+  <select id="switch-css">
+      <option value="">User Agent Style Sheet</option>
+  </select>
+  <a href="https://github.com/kemar/html-elements">GitHub</a>`
 document.querySelector('body').prepend(toolbar)
 
 let switchElement = document.querySelector('#switch-css')

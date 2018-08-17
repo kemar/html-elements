@@ -1,59 +1,43 @@
 #toolbar {
     all: initial;
     background: rgba(208, 208, 208, 0.8);
-    border-width: 0 0 1px 0;
     border: 1px solid #9c9c9c;
+    border-width: 0 0 1px 0;
+    padding: 5px;
     position: absolute;
     right: 0;
     top: 0;
     left: 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-}
-
-#toolbar > div {
-  padding: 10px;
+    justify-content: flex-start;
 }
 
 #toolbar * {
     all: initial;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 5px;
 }
 
 #toolbar label {
     cursor: pointer;
-    display: inline-block;
-    position: relative;
-    padding-right: 10px;
-}
-
-#toolbar label:before {
-    content: '▲';
-    position: absolute;
-    top: -3px;
-    right: -22px;
-    font-size: 11px;
-}
-
-#toolbar label:after {
-    content: '▼';
-    position: absolute;
-    top: 7px;
-    right: -22px;
-    font-size: 11px;
 }
 
 #toolbar select {
     background: white;
     border: 1px solid #9c9c9c;
     border-radius: 4px;
-    margin: 0;
-    min-width: 300px;
-    max-width: 50%;
-    padding: 10px 10px 10px 20px;
+    padding: 10px;
     text-transform: capitalize;
+    flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+    #toolbar select  {
+        width: 100%;
+    }
 }
 
 #toolbar select:focus {
@@ -68,5 +52,4 @@
   cursor: pointer;
   color: #061DE4;
   display: inline-block;
-  margin-right: 10px;
 }
