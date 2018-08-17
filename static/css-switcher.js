@@ -53,6 +53,11 @@ let styles = {
             source: 'https://github.com/mobi-css/mobi.css',
         },
         {
+            name: 'lighter-1.1.1',
+            href: 'https://cdn.rawgit.com/amine1107/lighter/V1.1.1/build/lighter.min.css',
+            source: 'https://github.com/amine1107/lighter',
+        },
+        {
             name: 'pure-1.0.0',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css',
             source: 'https://github.com/pure-css/pure/',
@@ -61,6 +66,11 @@ let styles = {
             name: 'sakura-1.0.0',
             href: 'https://cdn.rawgit.com/oxalorg/sakura/1.0.0/css/sakura.css',
             source: 'https://github.com/oxalorg/sakura',
+        },
+        {
+            name: 'typebase.css-0.5.0',
+            href: 'https://cdnjs.cloudflare.com/ajax/libs/typebase.css/0.5.0/typebase.min.css',
+            source: 'https://github.com/devinhunt/typebase.css',
         },
         {
             name: 'wing-0.1.9',
