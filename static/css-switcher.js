@@ -6,6 +6,14 @@
 let styles = {
     'Reset and Normalize': [
         {
+            name: 'hyper-reset-css-1.6.0',
+            href: 'https://unpkg.com/hyper-reset-css@1.6.0/dist/reset.min.css',
+            source: 'https://github.com/heyallan/hyper-reset-css',
+        },{
+            name: 'marx-3.0.3',
+            href: 'https://unpkg.com/marx-css@3.0.3/css/marx.min.css',
+            source: 'https://github.com/mblode/marx',
+        },{
             name: 'micro-css-reset-1.0.0',
             href: 'https://unpkg.com/css-micro-reset@1.0.0/micro-css-reset.css',
             source: 'https://github.com/vladocar/CSS-Micro-Reset',
@@ -123,6 +131,16 @@ let styles = {
             name: 'tachyons-4.9.1',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css',
             source: 'https://github.com/tachyons-css/tachyons/',
+        },
+        {
+            name: 'tacit-1.3.2',
+            href: 'https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.3.2.min.css',
+            source: 'https://github.com/yegor256/tacit/',
+        },
+        {
+            name: 'tufte-1.4',
+            href: 'https://cdn.rawgit.com/edwardtufte/tufte-css/gh-pages/tufte.css',
+            source: 'https://github.com/edwardtufte/tufte-css',
         },
         {
             name: 'uikit-2.27.4',
