@@ -88,6 +88,11 @@ let styles = {
     ],
     'General': [
         {
+            name: 'awsm-2.1.0',
+            href: 'https://unpkg.com/awsm.css@2.1.0/dist/awsm.min.css',
+            source: 'https://github.com/igoradamenko/awsm.css',
+        },
+        {
             name: 'blaze-3.6.3',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/blaze/3.6.3/blaze.min.css',
             source: 'https://github.com/BlazeCSS/blaze',
@@ -126,6 +131,16 @@ let styles = {
             name: 'spectre-0.5.3',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.3/spectre.min.css',
             source: 'https://github.com/picturepan2/spectre',
+        },
+        {
+            name: 'style.css-1.0.0',
+            href: 'https://unpkg.com/style.css@1.0.0',
+            source: 'https://github.com/css-pkg/style.css',
+        },
+        {
+            name: 'superstylin-1.0.3',
+            href: 'https://unpkg.com/superstylin@1.0.3',
+            source: 'https://github.com/caiogondim/superstylin',
         },
         {
             name: 'tachyons-4.9.1',
