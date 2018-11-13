@@ -76,6 +76,12 @@ let styles = {
             source: 'https://github.com/oxalorg/sakura',
         },
         {
+            // Skeleton works in conjunction with Normalize CSS, included it anyway for reference.
+            name: 'skeleton-2.0.4',
+            href: 'https://cdn.rawgit.com/dhg/Skeleton/2.0.4/css/skeleton.css',
+            source: 'https://github.com/dhg/Skeleton',
+        },
+        {
             name: 'typebase.css-0.5.0',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/typebase.css/0.5.0/typebase.min.css',
             source: 'https://github.com/devinhunt/typebase.css',
