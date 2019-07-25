@@ -154,14 +154,19 @@ let styles = {
             source: 'https://github.com/tachyons-css/tachyons/',
         },
         {
-            name: 'tacit-1.3.2',
-            href: 'https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.3.2.min.css',
+            name: 'tacit-1.5.1',
+            href: 'https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.5.1.min.css',
             source: 'https://github.com/yegor256/tacit/',
         },
         {
             name: 'tufte-1.4',
             href: 'https://cdn.rawgit.com/edwardtufte/tufte-css/gh-pages/tufte.css',
             source: 'https://github.com/edwardtufte/tufte-css',
+        },
+        {
+            name: 'turret-5.1.3',
+            href: 'https://unpkg.com/turretcss@5.1.3/dist/turretcss.min.css',
+            source: 'https://github.com/turretcss/turretcss',
         },
         {
             name: 'uikit-2.27.4',
