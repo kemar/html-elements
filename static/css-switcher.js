@@ -30,7 +30,7 @@ let styles = {
         },
         {
             name: 'normalize-opentype-0.2.4',
-            href: 'https://cdn.rawgit.com/kennethormandy/normalize-opentype.css/v0.2.4/normalize-opentype.css',
+            href: 'https://cdn.jsdelivr.net/gh/kennethormandy/normalize-opentype.css@v0.2.4/normalize-opentype.css',
             source: 'https://github.com/kennethormandy/normalize-opentype.css',
         },
         {
@@ -62,7 +62,7 @@ let styles = {
         },
         {
             name: 'lighter-1.1.1',
-            href: 'https://cdn.rawgit.com/amine1107/lighter/V1.1.1/build/lighter.min.css',
+            href: 'https://cdn.jsdelivr.net/gh/amine1107/lighter@V1.1.1/build/lighter.min.css',
             source: 'https://github.com/amine1107/lighter',
         },
         {
@@ -72,13 +72,13 @@ let styles = {
         },
         {
             name: 'sakura-1.0.0',
-            href: 'https://cdn.rawgit.com/oxalorg/sakura/1.0.0/css/sakura.css',
+            href: 'https://cdn.jsdelivr.net/gh/oxalorg/sakura@1.0.0/css/sakura.css',
             source: 'https://github.com/oxalorg/sakura',
         },
         {
             // Skeleton works in conjunction with Normalize CSS, included it anyway for reference.
             name: 'skeleton-2.0.4',
-            href: 'https://cdn.rawgit.com/dhg/Skeleton/2.0.4/css/skeleton.css',
+            href: 'https://cdn.jsdelivr.net/gh/oxalorg/sakura@1.0.0/css/sakura.css',
             source: 'https://github.com/dhg/Skeleton',
         },
         {
@@ -115,7 +115,7 @@ let styles = {
         },
         {
             name: 'base-4.0.10',
-            href: 'https://cdn.rawgit.com/getbase/base/v4.0.10/css/index.css',
+            href: 'https://cdn.jsdelivr.net/gh/getbase/base@v4.0.10/css/index.css',
             source: 'https://github.com/getbase/base',
         },
         {
@@ -155,12 +155,12 @@ let styles = {
         },
         {
             name: 'tacit-1.5.1',
-            href: 'https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.5.1.min.css',
+            href: 'https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.1.min.css',
             source: 'https://github.com/yegor256/tacit/',
         },
         {
             name: 'tufte-1.4',
-            href: 'https://cdn.rawgit.com/edwardtufte/tufte-css/gh-pages/tufte.css',
+            href: 'https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css@gh-pages/tufte.css',
             source: 'https://github.com/edwardtufte/tufte-css',
         },
         {
