@@ -61,6 +61,11 @@ let styles = {
             source: 'https://github.com/mobi-css/mobi.css',
         },
         {
+            name: 'mvp',
+            href: 'https://cdn.jsdelivr.net/gh/andybrewer/mvp@master/mvp.css',
+            source: 'https://github.com/andybrewer/mvp',
+        },
+        {
             name: 'lighter-1.1.1',
             href: 'https://cdn.rawgit.com/amine1107/lighter/V1.1.1/build/lighter.min.css',
             source: 'https://github.com/amine1107/lighter',
