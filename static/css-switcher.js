@@ -66,6 +66,11 @@ let styles = {
             source: 'https://github.com/andybrewer/mvp',
         },
         {
+            name: 'new.css',
+            href: 'https://newcss.net/new.min.css',
+            source: 'https://github.com/xz/new.css',
+        },
+        {
             name: 'lighter-1.1.1',
             href: 'https://cdn.jsdelivr.net/gh/amine1107/lighter@V1.1.1/build/lighter.min.css',
             source: 'https://github.com/amine1107/lighter',
