@@ -1,7 +1,4 @@
 // https://github.com/troxler/awesome-css-frameworks
-// https://cdnjs.com/
-// https://rawgit.com
-// https://unpkg.com/
 
 let styles = [
     {
@@ -170,29 +167,39 @@ let setActiveStyleSheet = function (title) {
     )
 }
 
-let toolbar = document.querySelector('#toolbar')
+let activeCssLink = document.querySelector('#active-css-link')
+activeCssLink.style.display = 'none'
 
 let switchElement = document.querySelector('#switch-css')
 
-for (let style of styles) {
+let toolbar = document.querySelector('#toolbar')
 
+for (let style of styles) {
     // Add <link> elements in the <head> section.
     let link = document.createElement('link')
     link.rel = 'alternate stylesheet'
     link.href = style.href
     link.title = style.name
     document.head.appendChild(link)
-
     // Create <option>s.
     let option = document.createElement('option')
     option.value = style.name
     option.text = style.name.replace('-', ' ')
-
     // Add <option>s to <select>.
     switchElement.appendChild(option)
+}
 
+let showActiveStyleSheetSource = function () {
+    let activeStyleSheets = document.querySelectorAll('link:not([disabled])')
+    if (activeStyleSheets.length) {
+        activeCssLink.style.display = ''
+        activeCssLink.href = activeStyleSheets[0].href
+    } else {
+        activeCssLink.style.display = 'none'
+    }
 }
 
 switchElement.addEventListener('change', function (e) {
     setActiveStyleSheet(e.target.value)
+    showActiveStyleSheetSource()
 })
