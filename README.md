@@ -2,12 +2,6 @@
 
 This repo contains an HTML page with all HTML5 elements for styling. I added a style switcher ([like it's 2001](https://alistapart.com/article/alternate)) to dynamically switch between the style sheets of various CSS frameworks and studying how they deal with HTML elements.
 
-## HTML source
-
-- [WHATWG](https://html.spec.whatwg.org/dev/semantics.html)
-- [W3C](http://w3c.github.io/html/semantics.html)
-- [MDN](https://developer.mozilla.org/docs/Web/HTML/Element)
-
 ## Inspiration
 
 - [*HTML page with (most) all elements, for styling*](https://stackoverflow.com/questions/4790046/html-page-with-most-all-elements-for-styling)
