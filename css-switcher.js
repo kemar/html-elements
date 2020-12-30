@@ -4,171 +4,160 @@ let styles = [
     {
         "name": "awsm",
         "href": "https://unpkg.com/awsm.css/dist/awsm.min.css",
-        "source": "https://github.com/igoradamenko/awsm.css"
+        "homepage": "https://github.com/igoradamenko/awsm.css"
     },
     {
         "name": "bootstrap",
         "href": "https://unpkg.com/bootstrap/dist/css/bootstrap.min.css",
-        "source": "https://github.com/twbs/bootstrap"
+        "homepage": "https://github.com/twbs/bootstrap"
     },
     {
         "name": "bulma",
         "href": "https://unpkg.com/bulma",
-        "source": "https://github.com/jgthms/bulma"
+        "homepage": "https://github.com/jgthms/bulma"
     },
     {
         "name": "chota",
         "href": "https://unpkg.com/chota",
-        "source": "https://github.com/jenil/chota"
+        "homepage": "https://github.com/jenil/chota"
     },
     {
         "name": "hyper-reset-css",
         "href": "https://unpkg.com/hyper-reset-css",
-        "source": "https://github.com/heyallan/hyper-reset-css"
+        "homepage": "https://github.com/heyallan/hyper-reset-css"
     },
     {
         "name": "kube-6.5.2",
         "href": "https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.min.css",
-        "source": "https://github.com/imperavi/kube"
+        "homepage": "https://github.com/imperavi/kube"
     },
     {
         "name": "marx",
         "href": "https://unpkg.com/marx-css/css/marx.min.css",
-        "source": "https://github.com/mblode/marx"
+        "homepage": "https://github.com/mblode/marx"
     },
     {
         "name": "milligram",
         "href": "https://unpkg.com/milligram",
-        "source": "https://github.com/milligram/milligram"
+        "homepage": "https://github.com/milligram/milligram"
     },
     {
         "name": "mini-3.0.1",
         "href": "https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css",
-        "source": "https://github.com/Chalarangelo/mini.css"
+        "homepage": "https://github.com/Chalarangelo/mini.css"
     },
     {
         "name": "minireset",
         "href": "https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css",
-        "source": "https://github.com/jgthms/minireset.css"
+        "homepage": "https://github.com/jgthms/minireset.css"
     },
     {
         "name": "mobi",
         "href": "https://unpkg.com/mobi.css/dist/mobi.min.css",
-        "source": "https://github.com/mobi-css/mobi.css"
+        "homepage": "https://github.com/mobi-css/mobi.css"
     },
     {
         "name": "mvp",
         "href": "https://unpkg.com/mvp.css",
-        "source": "https://github.com/andybrewer/mvp"
+        "homepage": "https://github.com/andybrewer/mvp"
     },
     {
         "name": "new.css",
         "href": "https://newcss.net/new.min.css",
-        "source": "https://github.com/xz/new.css"
+        "homepage": "https://github.com/xz/new.css"
     },
     {
         "name": "normalize",
         "href": "https://unpkg.com/normalize.css",
-        "source": "https://github.com/necolas/normalize.css"
+        "homepage": "https://github.com/necolas/normalize.css"
     },
     {
         "name": "primer",
         "href": "https://unpkg.com/@primer/css/dist/primer.css",
-        "source": "https://github.com/primer/primer-css"
+        "homepage": "https://github.com/primer/primer-css"
     },
     {
         "name": "pure",
         "href": "https://unpkg.com/purecss",
-        "source": "https://github.com/pure-css/pure/"
+        "homepage": "https://github.com/pure-css/pure/"
     },
     {
         "name": "sakura",
         "href": "https://unpkg.com/sakura.css/css/sakura.css",
-        "source": "https://github.com/oxalorg/sakura"
+        "homepage": "https://github.com/oxalorg/sakura"
     },
     {
         "name": "sanitize",
         "href": "https://unpkg.com/sanitize.css",
-        "source": "https://github.com/csstools/sanitize.css"
+        "homepage": "https://github.com/csstools/sanitize.css"
     },
     {
         "name": "skeleton-2.0.4",
         "href": "http://getskeleton.com/dist/css/skeleton.css",
-        "source": "https://github.com/dhg/Skeleton"
+        "homepage": "https://github.com/dhg/Skeleton"
     },
     {
         "name": "spectre",
         "href": "https://unpkg.com/spectre.css/dist/spectre.min.css",
-        "source": "https://github.com/picturepan2/spectre"
+        "homepage": "https://github.com/picturepan2/spectre"
     },
     {
         "name": "style.css",
         "href": "https://unpkg.com/style.css",
-        "source": "https://github.com/css-pkg/style.css"
+        "homepage": "https://github.com/css-pkg/style.css"
     },
     {
         "name": "stylizer",
         "href": "https://cdn.jsdelivr.net/npm/stylizercss/build/stylizer.min.css",
-        "source": "https://github.com/amine1107/Stylizer"
+        "homepage": "https://github.com/amine1107/Stylizer"
     },
     {
         "name": "superstylin",
         "href": "https://unpkg.com/superstylin",
-        "source": "https://github.com/caiogondim/superstylin"
+        "homepage": "https://github.com/caiogondim/superstylin"
     },
     {
         "name": "tachyons",
         "href": "https://unpkg.com/tachyons",
-        "source": "https://github.com/tachyons-css/tachyons/"
+        "homepage": "https://github.com/tachyons-css/tachyons/"
     },
     {
         "name": "tufte",
         "href": "https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css@gh-pages/tufte.css",
-        "source": "https://github.com/edwardtufte/tufte-css"
+        "homepage": "https://github.com/edwardtufte/tufte-css"
     },
     {
         "name": "turret",
         "href": "https://unpkg.com/turretcss/dist/turretcss.min.css",
-        "source": "https://github.com/turretcss/turretcss"
+        "homepage": "https://github.com/turretcss/turretcss"
     },
     {
         "name": "typebase.css-0.5.0",
         "href": "https://cdnjs.cloudflare.com/ajax/libs/typebase.css/0.5.0/typebase.min.css",
-        "source": "https://github.com/devinhunt/typebase.css"
+        "homepage": "https://github.com/devinhunt/typebase.css"
     },
     {
         "name": "uikit",
         "href": "https://unpkg.com/uikit/dist/css/uikit.css",
-        "source": "https://github.com/uikit/uikit"
+        "homepage": "https://github.com/uikit/uikit"
     },
     {
         "name": "wing",
         "href": "https://unpkg.com/wingcss",
-        "source": "https://github.com/kbrsh/wing"
+        "homepage": "https://github.com/kbrsh/wing"
     },
     {
         "name": "[WIP] base-elements",
         "href": "css/base-elements.css",
-        "source": ""
+        "homepage": ""
     },
 ]
 
-let setActiveStyleSheet = function (title) {
-    [].forEach.call(
-        document.querySelectorAll('link'),
-        function (el) {
-          if (el.getAttribute('rel').indexOf('style') != -1 && el.getAttribute('title')) {
-            el.disabled = true
-            if (el.getAttribute('title') == title) {
-              el.disabled = false
-            }
-          }
-        }
-    )
-}
+let activeCssHref = document.querySelector('#active-css-href')
+activeCssHref.style.display = 'none'
 
-let activeCssLink = document.querySelector('#active-css-link')
-activeCssLink.style.display = 'none'
+let activeCssHomePage = document.querySelector('#active-css-homepage')
+activeCssHomePage.style.display = 'none'
 
 let switchElement = document.querySelector('#switch-css')
 
@@ -189,17 +178,35 @@ for (let style of styles) {
     switchElement.appendChild(option)
 }
 
-let showActiveStyleSheetSource = function () {
-    let activeStyleSheets = document.querySelectorAll('link:not([disabled])')
-    if (activeStyleSheets.length) {
-        activeCssLink.style.display = ''
-        activeCssLink.href = activeStyleSheets[0].href
+let setActiveStyleSheet = function (name) {
+    [].forEach.call(
+        document.querySelectorAll('link'),
+        function (el) {
+          if (el.getAttribute('rel').indexOf('style') != -1 && el.getAttribute('title')) {
+            el.disabled = true
+            if (el.getAttribute('title') == name) {
+              el.disabled = false
+            }
+          }
+        }
+    )
+}
+
+let getLinks = function (name) {
+    let currentStyle = styles.find(item => item.name === name)
+    if (currentStyle) {
+        activeCssHref.style.display = ''
+        activeCssHref.href = currentStyle.href
+        activeCssHomePage.style.display = ''
+        activeCssHomePage.href = currentStyle.homepage
     } else {
-        activeCssLink.style.display = 'none'
+        activeCssHref.style.display = 'none'
+        activeCssHomePage.style.display = 'none'
     }
 }
 
 switchElement.addEventListener('change', function (e) {
-    setActiveStyleSheet(e.target.value)
-    showActiveStyleSheetSource()
+    let currentName = e.target.value
+    setActiveStyleSheet(currentName)
+    getLinks(currentName)
 })
