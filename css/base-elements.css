@@ -18,9 +18,6 @@
     --color-link-hover: #111;
     --color-link-active: #f2641c;
 
-    --color-button: #0070F3;
-    --color-button-hover: #0366D6;
-
     /* Backgrounds.
     --------------------------------------------------------------------------- */
 
@@ -35,15 +32,16 @@
     --------------------------------------------------------------------------- */
 
     --font-size-default: 18px;
-    --font-size-h1: 2.7rem;
-    --font-size-h2: 2.3rem;
-    --font-size-h3: 2rem;
-    --font-size-h4: 1.7rem;
-    --font-size-h5: 1.4rem;
-    --font-size-h6: 1.2rem;
+    --font-size-h1: 3.052rem;
+    --font-size-h2: 2.441rem;
+    --font-size-h3: 1.953rem;
+    --font-size-h4: 1.563rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
 
     --font-weight-default: 400;
-    --font-weight-heading: 500;
+    --font-weight-medium: 500;
+    --font-weight-heavy: 700;
 
     --line-height-default: 1.625;  /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
     --line-height-heading: calc(var(--line-height-default) * 0.8);
@@ -127,7 +125,7 @@ a:active {
 --------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-heading);
+    font-weight: var(--font-weight-heavy);
     line-height: var(--line-height-heading);
 }
 
@@ -155,16 +153,63 @@ h6 {
     font-size: var(--font-size-h6);
 }
 
-/* Code.
+/* Nav.
 --------------------------------------------------------------------------- */
 
-code {
-    padding: 1px 4px;
-    background: var(--background-color-default);
-    border: var(--border-width-default) solid var(--border-color-default);
-    border-radius: var(--input-border-radius);
-    font-family: var(--font-family-mono);
+nav ul {
+    list-style: none;
+    padding: 0;
 }
+
+nav li {
+    display: inline-block;
+}
+
+nav li:not(:last-child) {
+    margin-right: var(--padding-x-default);
+}
+
+/* Menu.
+--------------------------------------------------------------------------- */
+
+menu {
+    list-style: none;
+    padding: 0;
+}
+
+menu li {
+    display: inline-block;
+}
+
+menu li:not(:last-child) {
+    margin-right: var(--padding-x-default);
+}
+
+/* Definition lists.
+--------------------------------------------------------------------------- */
+
+dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+    border-top: var(--border-width-default) solid var(--border-color-default);
+}
+
+dt {
+    grid-column-start: 1;
+    font-weight: var(--font-weight-medium);
+    text-align: right;
+    border-bottom: var(--border-width-default) solid var(--border-color-default);
+    padding-right: 1rem;
+}
+
+dd {
+    grid-column-start: 2;
+    border-bottom: var(--border-width-default) solid var(--border-color-default);
+    margin-left: 0;
+}
+
+/* Code.
+--------------------------------------------------------------------------- */
 
 pre {
     padding: var(--padding-x-default) var(--padding-y-default);
@@ -175,9 +220,32 @@ pre {
     border-radius: var(--input-border-radius);
 }
 
+code {
+    font-family: var(--font-family-mono);
+    font-size: 80%;
+    padding: 1px 4px;
+    background: var(--background-color-default);
+    border: var(--border-width-default) solid var(--border-color-default);
+    border-radius: var(--input-border-radius);
+}
+
 pre code {
     border: none;
     background: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0.328rem;
+    font-family: var(--font-family-mono);
+    font-size: 80%;
+    color: var(--color-black);
+    background-color: var(--color-grey-light);
+    border: var(--border-width-default) solid var(--color-grey-medium);
+    border-bottom: 2px solid var(--color-grey-medium);
+    border-radius: 5px;
 }
 
 /* Blockquotes.
@@ -188,6 +256,7 @@ blockquote {
     background: var(--background-color-default);
     border-left: 5px solid var(--border-color-default);
     margin-left: 0;
+    margin-right: 0;
 }
 
 /* Tables.
@@ -248,6 +317,7 @@ hr {
 --------------------------------------------------------------------------- */
 
 label {
+    display: inline-block;
     cursor: pointer;
 }
 
@@ -262,10 +332,16 @@ fieldset {
     */
     width: 100%;
     min-width: 100%;
-    padding: 1rem;
-    border: var(--input-border-width) solid var(--input-border-color);
+    padding: 0;
+    border: 0;
 }
 
+legend {
+    width: 100%;
+    border-bottom: var(--input-border-width) solid var(--input-border-color);
+}
+
+input:not([type]),
 input[autocomplete],
 input[inputmode],
 input[type="date"],
@@ -284,6 +360,7 @@ input[type="url"],
 input[type="week"],
 select[multiple],
 textarea {
+    display: block;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -300,8 +377,21 @@ textarea {
     border-radius: var(--input-border-radius);
 }
 
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
 input[type="search"] {
     -webkit-appearance: textfield;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    vertical-align: top;
 }
 
 textarea {
@@ -315,12 +405,13 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    font-size: inherit;
-    background: var(--color-button);
-    border-radius: var(--input-border-radius);
-    border: 0;
     color: var(--color-white);
-    padding: 0.5rem 2rem;
+    background: var(--color-black);
+    font-size: inherit;
+    font-weight: var(--font-weight-medium);
+    border: var(--input-border-width) solid var(--color-black);
+    border-radius: var(--input-border-radius);
+    padding: 0.5rem 1.2rem;
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -342,5 +433,25 @@ input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
 input[type="button"]:enabled:hover {
-    background: var(--color-button-hover);
+    color: var(--color-black);
+    background: var(--color-white);
+}
+
+/* Details/Summary.
+--------------------------------------------------------------------------- */
+
+details {
+    padding: var(--padding-x-default) var(--padding-y-default);
+    background: var(--background-color-default);
+    border: var(--border-width-default) solid var(--border-color-default);
+    border-radius: var(--input-border-radius);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+}
+
+details[open]>*:last-child {
+    margin-bottom: 0;
 }
