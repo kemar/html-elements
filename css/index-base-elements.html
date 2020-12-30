@@ -4,19 +4,9 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>HTML Elements</title>
+    <link rel="stylesheet" href="base-elements.css" type="text/css">
 </head>
 <body>
-
-    <div id="toolbar">
-        <label for="switch-css">Switch CSS</label>
-            <select id="switch-css">
-            <option value="">User Agent Style Sheet</option>
-        </select>
-        <a id="active-css-homepage" href="" rel="noopener" target="_blank">[homepage ⧉]</a>
-        <a id="active-css-href" href="" rel="noopener" target="_blank">[source ⧉]</a>
-        [View this project on <a href="https://github.com/kemar/html-elements">GitHub</a>]
-    </div>
-    <hr>
 
     <ul>
         <li>
@@ -698,7 +688,7 @@
             <article>
                 <h3>Fluffy and the Yarn</h3>
                 <p>Fluffy was a cat who liked to play with yarn. She also liked to jump.</p>
-                <aside><img src="assets/img/strawberry-small.png" alt=""></aside>
+                <aside><img src="../assets/img/strawberry-small.png" alt=""></aside>
                 <p>She would play in the morning, she would play in the evening.</p>
             </article>
 
@@ -708,27 +698,27 @@
 
             <h2>The <code>embed</code> element</h2>
 
-            <embed type="application/pdf" src="assets/pdf_open_parameters.pdf">
+            <embed type="application/pdf" src="../assets/pdf_open_parameters.pdf">
 
             <h2>The <code>object</code> element</h2>
 
-            <object type="application/pdf" data="assets/pdf_open_parameters.pdf">
-                <param name="src" value="assets/pdf_open_parameters.pdf">
+            <object type="application/pdf" data="../assets/pdf_open_parameters.pdf">
+                <param name="src" value="../assets/pdf_open_parameters.pdf">
             </object>
 
             <h2>The <code>video</code> element</h2>
 
             <video controls width="300" height="200" muted>
-                <source src="assets/video/stream_of_water.webm" type="video/webm">
-                <source src="assets/video/stream_of_water.mp4" type="video/mp4">
-                <track default kind="subtitles" srclang="en" src="assets/video/stream_of_water.vtt">
-                <p>Your browser doesn't support HTML5 video. Here is a <a href="assets/video/stream_of_water.mp4">link to the video.</a> instead.</p>
+                <source src="../assets/video/stream_of_water.webm" type="video/webm">
+                <source src="../assets/video/stream_of_water.mp4" type="video/mp4">
+                <track default kind="subtitles" srclang="en" src="../assets/video/stream_of_water.vtt">
+                <p>Your browser doesn't support HTML5 video. Here is a <a href="../assets/video/stream_of_water.mp4">link to the video.</a> instead.</p>
             </video>
 
             <h2>The <code>audio</code> element</h2>
 
             <audio controls loop>
-                <source type="audio/mpeg" src="assets/audio/sos-morse-code_daniel-simion.mp3"/>
+                <source type="audio/mpeg" src="../assets/audio/sos-morse-code_daniel-simion.mp3"/>
                 <p>Your browser does not support the <code>audio</code> element.</p>
             </audio>
 
@@ -736,7 +726,7 @@
 
             <p>
                 Please select a shape:
-                <img src="assets/img/sample-usemap.png" usemap="#shapes" alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+                <img src="../assets/img/sample-usemap.png" usemap="#shapes" alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
                 <map name="shapes">
                     <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
                     <area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
@@ -1043,7 +1033,7 @@
                         <code>image</code>
                       </td>
                       <td>
-                        <input type="image" name="image" src="assets/icons/send.svg" alt="send">
+                        <input type="image" name="image" src="../assets/icons/send.svg" alt="send">
                       </td>
                     </tr>
                     <tr>
@@ -1201,8 +1191,6 @@
         </section>
 
     </main>
-
-    <script src="css-switcher.js"></script>
 
 </body>
 </html>
