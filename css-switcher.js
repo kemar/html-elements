@@ -155,15 +155,12 @@ let styles = [
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    let activeCssHref = document.querySelector("#active-css-href")
-    activeCssHref.style.display = "none"
-
     let activeCssHomePage = document.querySelector("#active-css-homepage")
-    activeCssHomePage.style.display = "none"
-
+    let activeCssHref = document.querySelector("#active-css-href")
     let switchElement = document.querySelector("#switch-css")
 
-    let toolbar = document.querySelector("#toolbar")
+    activeCssHref.style.display = "none"
+    activeCssHomePage.style.display = "none"
 
     for (let style of styles) {
         // Add <link> elements in the <head> section.
@@ -171,27 +168,22 @@ window.addEventListener("DOMContentLoaded", (event) => {
         link.rel = "alternate stylesheet"
         link.href = style.href
         link.title = style.name
+        link.type = "text/css"
         document.head.appendChild(link)
-        // Create <option>s.
+        // Create <option> elements.
         let option = document.createElement("option")
         option.value = style.name
         option.text = style.name.replace("-", " ")
-        // Add <option>s to <select>.
         switchElement.appendChild(option)
     }
 
     let setActiveStyleSheet = function (name) {
-        [].forEach.call(
-            document.querySelectorAll("link"),
-            function (el) {
-              if (el.getAttribute("rel").indexOf("style") != -1 && el.getAttribute("title")) {
-                el.disabled = true
-                if (el.getAttribute("title") == name) {
-                  el.disabled = false
-                }
-              }
+        document.querySelectorAll(`link[rel="alternate stylesheet"]`).forEach(el => {
+            el.disabled = true
+            if (el.getAttribute("title") == name) {
+                el.disabled = false
             }
-        )
+        })
     }
 
     let getLinks = function (name) {
