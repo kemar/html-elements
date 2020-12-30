@@ -146,6 +146,11 @@ let styles = [
         "href": "https://unpkg.com/wingcss",
         "homepage": "https://github.com/kbrsh/wing"
     },
+    {
+        "name": "[WIP] base-elements",
+        "href": "css/base-elements.css",
+        "homepage": ""
+    }
 ]
 
 window.addEventListener("DOMContentLoaded", (event) => {
