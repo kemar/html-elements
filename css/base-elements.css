@@ -445,6 +445,7 @@ details {
     background: var(--background-color-default);
     border: var(--border-width-default) solid var(--border-color-default);
     border-radius: var(--input-border-radius);
+    margin-bottom: 1rem;
 }
 
 summary {
@@ -452,6 +453,6 @@ summary {
     font-weight: var(--font-weight-medium);
 }
 
-details[open]>*:last-child {
+details[open] > *:last-child {
     margin-bottom: 0;
 }
