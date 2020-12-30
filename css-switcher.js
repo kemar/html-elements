@@ -146,11 +146,6 @@ let styles = [
         "href": "https://unpkg.com/wingcss",
         "homepage": "https://github.com/kbrsh/wing"
     },
-    {
-        "name": "[WIP] base-elements",
-        "href": "css/base-elements.css",
-        "homepage": ""
-    },
 ]
 
 let activeCssHref = document.querySelector('#active-css-href')
