@@ -155,20 +155,18 @@ let styles = [
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    let activeCssHref = document.querySelector("#active-css-href")
-    activeCssHref.style.display = "none"
-
-    let activeCssHomePage = document.querySelector("#active-css-homepage")
-    activeCssHomePage.style.display = "none"
-
     let switchElement = document.querySelector("#switch-css")
+    let activeCssHomePage = document.querySelector("#active-css-homepage")
+    let activeCssHref = document.querySelector("#active-css-href")
 
-    let toolbar = document.querySelector("#toolbar")
+    activeCssHref.style.display = "none"
+    activeCssHomePage.style.display = "none"
 
     for (let style of styles) {
         // Add <link> elements in the <head> section.
         let link = document.createElement("link")
         link.rel = "alternate stylesheet"
+        link.type = "text/css"
         link.href = style.href
         link.title = style.name
         document.head.appendChild(link)
@@ -176,22 +174,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
         let option = document.createElement("option")
         option.value = style.name
         option.text = style.name.replace("-", " ")
-        // Add <option>s to <select>.
         switchElement.appendChild(option)
     }
 
     let setActiveStyleSheet = function (name) {
-        [].forEach.call(
-            document.querySelectorAll("link"),
-            function (el) {
-              if (el.getAttribute("rel").indexOf("style") != -1 && el.getAttribute("title")) {
+        let links = document.querySelectorAll("link");
+        for (let i = 0; i < links.length; i++) {
+            let el = links[i]
+            if (el.getAttribute("rel").indexOf("style") != -1 && el.getAttribute("title")) {
                 el.disabled = true
-                if (el.getAttribute("title") == name) {
-                  el.disabled = false
+                if (el.getAttribute("title") === name) {
+                    el.disabled = false
                 }
-              }
             }
-        )
+        }
     }
 
     let getLinks = function (name) {
