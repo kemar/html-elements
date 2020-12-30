@@ -148,61 +148,64 @@ let styles = [
     },
 ]
 
-let activeCssHref = document.querySelector('#active-css-href')
-activeCssHref.style.display = 'none'
+window.addEventListener("DOMContentLoaded", (event) => {
 
-let activeCssHomePage = document.querySelector('#active-css-homepage')
-activeCssHomePage.style.display = 'none'
+    let activeCssHref = document.querySelector("#active-css-href")
+    activeCssHref.style.display = "none"
 
-let switchElement = document.querySelector('#switch-css')
+    let activeCssHomePage = document.querySelector("#active-css-homepage")
+    activeCssHomePage.style.display = "none"
 
-let toolbar = document.querySelector('#toolbar')
+    let switchElement = document.querySelector("#switch-css")
 
-for (let style of styles) {
-    // Add <link> elements in the <head> section.
-    let link = document.createElement('link')
-    link.rel = 'alternate stylesheet'
-    link.href = style.href
-    link.title = style.name
-    link.disabled = true
-    document.head.appendChild(link)
-    // Create <option>s.
-    let option = document.createElement('option')
-    option.value = style.name
-    option.text = style.name.replace('-', ' ')
-    // Add <option>s to <select>.
-    switchElement.appendChild(option)
-}
+    let toolbar = document.querySelector("#toolbar")
 
-let setActiveStyleSheet = function (name) {
-    [].forEach.call(
-        document.querySelectorAll('link'),
-        function (el) {
-          if (el.getAttribute('rel').indexOf('style') != -1 && el.getAttribute('title')) {
-            el.disabled = true
-            if (el.getAttribute('title') == name) {
-              el.disabled = false
-            }
-          }
-        }
-    )
-}
-
-let getLinks = function (name) {
-    let currentStyle = styles.find(item => item.name === name)
-    if (currentStyle) {
-        activeCssHref.style.display = ''
-        activeCssHref.href = currentStyle.href
-        activeCssHomePage.style.display = ''
-        activeCssHomePage.href = currentStyle.homepage
-    } else {
-        activeCssHref.style.display = 'none'
-        activeCssHomePage.style.display = 'none'
+    for (let style of styles) {
+        // Add <link> elements in the <head> section.
+        let link = document.createElement("link")
+        link.rel = "alternate stylesheet"
+        link.href = style.href
+        link.title = style.name
+        document.head.appendChild(link)
+        // Create <option>s.
+        let option = document.createElement("option")
+        option.value = style.name
+        option.text = style.name.replace("-", " ")
+        // Add <option>s to <select>.
+        switchElement.appendChild(option)
     }
-}
 
-switchElement.addEventListener('change', function (e) {
-    let currentName = e.target.value
-    setActiveStyleSheet(currentName)
-    getLinks(currentName)
+    let setActiveStyleSheet = function (name) {
+        [].forEach.call(
+            document.querySelectorAll("link"),
+            function (el) {
+              if (el.getAttribute("rel").indexOf("style") != -1 && el.getAttribute("title")) {
+                el.disabled = true
+                if (el.getAttribute("title") == name) {
+                  el.disabled = false
+                }
+              }
+            }
+        )
+    }
+
+    let getLinks = function (name) {
+        let currentStyle = styles.find(item => item.name === name)
+        if (currentStyle) {
+            activeCssHref.style.display = ""
+            activeCssHref.href = currentStyle.href
+            activeCssHomePage.style.display = ""
+            activeCssHomePage.href = currentStyle.homepage
+        } else {
+            activeCssHref.style.display = "none"
+            activeCssHomePage.style.display = "none"
+        }
+    }
+
+    switchElement.addEventListener("change", function (e) {
+        let currentName = e.target.value
+        setActiveStyleSheet(currentName)
+        getLinks(currentName)
+    })
+
 })
