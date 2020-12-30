@@ -165,20 +165,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     let toolbar = document.querySelector("#toolbar")
 
-    // for (let style of styles) {
-    //     // Add <link> elements in the <head> section.
-    //     let link = document.createElement("link")
-    //     link.rel = "alternate stylesheet"
-    //     link.href = style.href
-    //     link.title = style.name
-    //     document.head.appendChild(link)
-    //     // Create <option>s.
-    //     let option = document.createElement("option")
-    //     option.value = style.name
-    //     option.text = style.name.replace("-", " ")
-    //     // Add <option>s to <select>.
-    //     switchElement.appendChild(option)
-    // }
+    for (let style of styles) {
+        // Add <link> elements in the <head> section.
+        let link = document.createElement("link")
+        link.rel = "alternate stylesheet"
+        link.href = style.href
+        link.title = style.name
+        document.head.appendChild(link)
+        // Create <option>s.
+        let option = document.createElement("option")
+        option.value = style.name
+        option.text = style.name.replace("-", " ")
+        // Add <option>s to <select>.
+        switchElement.appendChild(option)
+    }
 
     let setActiveStyleSheet = function (name) {
         [].forEach.call(
