@@ -164,6 +164,7 @@ for (let style of styles) {
     link.rel = 'alternate stylesheet'
     link.href = style.href
     link.title = style.name
+    link.disabled = true
     document.head.appendChild(link)
     // Create <option>s.
     let option = document.createElement('option')
