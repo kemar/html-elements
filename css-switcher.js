@@ -178,31 +178,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     let setActiveStyleSheet = function (name) {
+
+        // Activate the selected stylesheet.
         document.querySelectorAll(`link[rel="alternate stylesheet"]`).forEach(el => {
             el.disabled = true
             if (el.getAttribute("title") == name) {
                 el.disabled = false
             }
         })
-    }
 
-    let getLinks = function (name) {
-        let currentStyle = styles.find(item => item.name === name)
-        if (currentStyle) {
+        let selectedStyle = styles.find(item => item.name === name)
+        if (selectedStyle) {
             activeCssHref.style.display = ""
-            activeCssHref.href = currentStyle.href
+            activeCssHref.href = selectedStyle.href
             activeCssHomePage.style.display = ""
-            activeCssHomePage.href = currentStyle.homepage
+            activeCssHomePage.href = selectedStyle.homepage
         } else {
             activeCssHref.style.display = "none"
             activeCssHomePage.style.display = "none"
         }
+
     }
 
     switchElement.addEventListener("change", function (e) {
         let currentName = e.target.value
         setActiveStyleSheet(currentName)
-        getLinks(currentName)
     })
 
 })
