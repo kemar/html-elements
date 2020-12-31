@@ -158,6 +158,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let activeCssHomePage = document.querySelector("#active-css-homepage")
     let activeCssHref = document.querySelector("#active-css-href")
     let switchElement = document.querySelector("#switch-css")
+    let params = new URLSearchParams(window.location.search)
 
     activeCssHref.style.display = "none"
     activeCssHomePage.style.display = "none"
@@ -184,6 +185,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
             el.disabled = true
             if (el.getAttribute("title") == name) {
                 el.disabled = false
+                params.set("name", name)
+                window.history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
             }
         })
 
@@ -196,6 +199,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         } else {
             activeCssHref.style.display = "none"
             activeCssHomePage.style.display = "none"
+            params.delete("name")
+            window.history.replaceState({}, "", `${location.pathname}`);
         }
 
     }
@@ -204,5 +209,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         let currentName = e.target.value
         setActiveStyleSheet(currentName)
     })
+
+    let name = params.get("name")
+    if (name) {
+        switchElement.value = name
+        switchElement.dispatchEvent(new Event("change"))
+    }
 
 })
