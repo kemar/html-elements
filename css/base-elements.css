@@ -186,22 +186,6 @@ h6 {
     font-size: var(--font-size-h6);
 }
 
-/* Nav.
---------------------------------------------------------------------------- */
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav li:not(:last-child) {
-    margin-right: var(--padding-x-default);
-}
-
 /* Menu.
 --------------------------------------------------------------------------- */
 
