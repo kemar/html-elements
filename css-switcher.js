@@ -1,5 +1,3 @@
-// https://github.com/troxler/awesome-css-frameworks
-
 let styles = [
     {
         "name": "awsm",
@@ -60,6 +58,11 @@ let styles = [
         "name": "mvp",
         "href": "https://unpkg.com/mvp.css",
         "homepage": "https://github.com/andybrewer/mvp"
+    },
+    {
+        "name": "namida",
+        "href": "https://unpkg.com/namida/namida.css",
+        "homepage": "https://github.com/kemar/namida"
     },
     {
         "name": "new.css",
@@ -146,11 +149,6 @@ let styles = [
         "href": "https://unpkg.com/wingcss",
         "homepage": "https://github.com/kbrsh/wing"
     },
-    {
-        "name": "[WIP] base-elements",
-        "href": "css/base-elements.css",
-        "homepage": ""
-    }
 ]
 
 window.addEventListener("DOMContentLoaded", (event) => {
