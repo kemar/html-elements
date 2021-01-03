@@ -12,9 +12,9 @@
     --color-text: #000;
     --color-background: #fff;
 
-    --color-link-active: #f2641c;  /* Orange. */
-    --color-link-hover: #111;  /* Lighter black. */
     --color-link: #062ffa;  /* Blue. */
+    --color-link-hover: #111;  /* Lighter black. */
+    --color-link-active: #f2641c;  /* Orange. */
 
     --color-tag-background: #f5f5f5;  /* Gray light. */
     --color-tag-border: #cbcbcb;  /* Gray medium. */
@@ -91,6 +91,22 @@
     --button-color:            var(--color-background);
     --button-padding-x:        0.5rem;
     --button-padding-y:        1.2rem;
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --color-text: #f9f9f9;
+        --color-background: #000;
+
+        --color-link: #2997ff;
+        --color-link-hover: #f2641c;
+        --color-link-active: #f9f9f9;
+
+        --color-tag-background: #1e1e1e;
+        --color-tag-border: #939393;
+    }
 
 }
 
