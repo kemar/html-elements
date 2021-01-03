@@ -9,27 +9,35 @@
     /* Colors.
     --------------------------------------------------------------------------- */
 
-    --color-white: #fff;
-    --color-black: #000;
-    --color-grey-light: #f5f5f5;
-    --color-grey-medium: #cbcbcb;
+    --color-text: #000;
+    --color-background: #fff;
 
-    --color-link: #062ffa;
-    --color-link-hover: #111;
-    --color-link-active: #f2641c;
+    --color-link-active: #f2641c;  /* Orange. */
+    --color-link-hover: #111;  /* Lighter black. */
+    --color-link: #062ffa;  /* Blue. */
 
-    /* Backgrounds.
+    --color-tag-background: #f5f5f5;  /* Gray light. */
+    --color-tag-border: #cbcbcb;  /* Gray medium. */
+
+    /* Spacing.
     --------------------------------------------------------------------------- */
 
-    --background-color-default: var(--color-grey-light);
+    --spacing-default: 1rem;
 
-    /* Padding.
-    --------------------------------------------------------------------------- */
     --padding-x-default: 0.625rem;
-    --padding-y-default: 1rem;
-    --margin-bottom-default: 1rem;
+    --padding-y-default: var(--spacing-default);
 
     /* Fonts.
+
+    Setting the font size on <html> to 1rem sets the text size to the
+    browser's default font size: usually 16px.
+
+    Let's upsize to a trendy 18px.
+
+    Then:
+    18px = 1rem
+    36px = 2rem => (36 * 1) / 18
+    3.052rem => 3.052 * 18 = 54.936px
     --------------------------------------------------------------------------- */
 
     --font-size-default: 18px;
@@ -51,12 +59,8 @@
     --------------------------------------------------------------------------- */
 
     --border-width-default:  1px;
-    --border-width-big:      5px;
-
     --border-radius-default: 2px;
-    --border-radius-big:     5px;
-
-    --border-color-default:  var(--color-grey-medium);
+    --border-color-default:  var(--color-tag-border);
 
     /* Tables.
     --------------------------------------------------------------------------- */
@@ -65,23 +69,28 @@
     --table-border-color: var(--border-color-default);
     --table-padding-x:    var(--padding-x-default);
     --table-padding-y:    var(--padding-y-default);
-    --table-padding:      var(--table-padding-x) var(--table-padding-y);
 
     /* Forms.
     --------------------------------------------------------------------------- */
 
-    --input-line-height:      var(--line-height-default);
-    --input-border-width:     var(--border-width-default);
+    --input-background-color: var(--color-tag-background);
     --input-border-color:     var(--border-color-default);
     --input-border-radius:    var(--border-radius-default);
-    --input-background-color: var(--background-color-default);
+    --input-border-width:     var(--border-width-default);
+    --input-line-height:      var(--line-height-default);
     --input-padding-x:        5px;
     --input-padding-y:        10px;
-    --input-padding:          var(--input-padding-x) var(--input-padding-y);
 
+    /* Buttons.
+    --------------------------------------------------------------------------- */
+
+    --button-background-color: var(--color-text);
+    --button-border-color:     var(--color-text);
+    --button-border-radius:    var(--border-radius-default);
+    --button-border-width:     var(--border-width-default);
+    --button-color:            var(--color-background);
     --button-padding-x:        0.5rem;
     --button-padding-y:        1.2rem;
-    --button-padding:          var(--button-padding-x) var(--button-padding-y);
 
 }
 
@@ -98,8 +107,8 @@
 --------------------------------------------------------------------------- */
 
 html {
-    color: var(--color-black);
-    background: var(--color-white);
+    color: var(--color-text);
+    background: var(--color-background);
     font-size: var(--font-size-default);
     font-family: var(--font-family-default);
     overflow-y: scroll;
@@ -207,7 +216,7 @@ dt {
     font-weight: var(--font-weight-medium);
     text-align: right;
     border-bottom: var(--border-width-default) solid var(--border-color-default);
-    padding-right: 1rem;
+    padding-right: var(--spacing-default);
 }
 
 dd {
@@ -223,18 +232,18 @@ pre {
     padding: var(--padding-x-default) var(--padding-y-default);
     max-width: 100%;
     overflow: auto;
-    background: var(--background-color-default);
+    background: var(--color-tag-background);
     border: var(--border-width-default) solid var(--border-color-default);
-    border-radius: var(--input-border-radius);
+    border-radius: var(--border-radius-default);
 }
 
 code {
     font-family: var(--font-family-mono);
     font-size: 80%;
     padding: 1px 4px;
-    background: var(--background-color-default);
+    background: var(--color-tag-background);
     border: var(--border-width-default) solid var(--border-color-default);
-    border-radius: var(--input-border-radius);
+    border-radius: var(--border-radius-default);
 }
 
 pre code {
@@ -249,11 +258,11 @@ kbd {
     padding: 0 0.328rem;
     font-family: var(--font-family-mono);
     font-size: 80%;
-    color: var(--color-black);
-    background-color: var(--color-grey-light);
-    border: var(--border-width-default) solid var(--color-grey-medium);
-    border-bottom: 2px solid var(--color-grey-medium);
-    border-radius: var(--border-radius-big);
+    color: var(--color-text);
+    background-color: var(--color-tag-background);
+    border: var(--border-width-default) solid var(--color-tag-border);
+    border-bottom: 2px solid var(--color-tag-border);
+    border-radius: 5px;
 }
 
 /* Blockquotes.
@@ -261,8 +270,8 @@ kbd {
 
 blockquote {
     padding: var(--padding-x-default) var(--padding-y-default);
-    background: var(--background-color-default);
-    border-left: var(--border-width-big) solid var(--border-color-default);
+    background: var(--color-tag-background);
+    border-left: 5px solid var(--border-color-default);
     margin-left: 0;
     margin-right: 0;
 }
@@ -276,24 +285,24 @@ table {
     empty-cells: show;
     text-align: left;
     border: var(--table-border-width) solid var(--table-border-color);
-    margin-bottom: var(--margin-bottom-default);
+    margin-bottom: var(--spacing-default);
 }
 
 table caption {
-    padding: var(--table-padding);
+    padding: var(--table-padding-x) var(--table-padding-y);
     font-style: italic;
 }
 
 table td,
 table th {
-    padding: var(--table-padding);
+    padding: var(--table-padding-x) var(--table-padding-y);
     border: var(--table-border-width) solid var(--table-border-color);
 }
 
 table thead,
 table tfoot {
-    background: var(--background-color-default);
-    padding: var(--table-padding);
+    background: var(--color-tag-background);
+    padding: var(--table-padding-x) var(--table-padding-y);
     vertical-align: bottom;
 }
 
@@ -378,7 +387,7 @@ textarea {
     color: inherit;
     max-width: 100%;
     margin: 0;
-    padding: var(--input-padding);
+    padding: var(--input-padding-x) var(--input-padding-y);
     background: var(--input-background-color);
     line-height: var(--input-line-height);
     border: var(--input-border-width) solid var(--input-border-color);
@@ -413,13 +422,13 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    color: var(--color-white);
-    background: var(--color-black);
+    color: var(--button-color);
+    background: var(--button-background-color);
     font-size: inherit;
     font-weight: var(--font-weight-medium);
-    border: var(--input-border-width) solid var(--color-black);
-    border-radius: var(--input-border-radius);
-    padding: var(--button-padding);
+    border: var(--button-border-width) solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding-x) var(--button-padding-y);
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -441,8 +450,8 @@ input[type="reset"]:focus,
 input[type="reset"]:enabled:hover,
 input[type="button"]:focus,
 input[type="button"]:enabled:hover {
-    color: var(--color-black);
-    background: var(--color-white);
+    color: var(--button-background-color);
+    background: var(--button-color);
 }
 
 /* Details/Summary.
@@ -450,10 +459,10 @@ input[type="button"]:enabled:hover {
 
 details {
     padding: var(--padding-x-default) var(--padding-y-default);
-    background: var(--background-color-default);
+    background: var(--color-tag-background);
     border: var(--border-width-default) solid var(--border-color-default);
-    border-radius: var(--input-border-radius);
-    margin-bottom: var(--margin-bottom-default);
+    border-radius: var(--border-radius-default);
+    margin-bottom: var(--spacing-default);
 }
 
 summary {
