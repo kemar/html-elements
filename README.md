@@ -1,10 +1,10 @@
 # How various CSS frameworks style bare HTML elements
 
-This repo contains an HTML page with all HTML5 elements and a style switcher ([like it's 2001](https://alistapart.com/article/alternate)) for previewing various CSS frameworks.
+This repo contains an HTML page with all HTML5 elements and a style switcher ([*like it's 2001*](https://alistapart.com/article/alternate)) for previewing various CSS frameworks.
 
 ## Inspiration
 
-- [*HTML page with (most) all elements, for styling*](https://stackoverflow.com/questions/4790046/html-page-with-most-all-elements-for-styling)
+- [HTML page with (most) all elements, for styling](https://stackoverflow.com/questions/4790046/html-page-with-most-all-elements-for-styling)
 - [HTML Elements Index](https://meiert.com/en/indices/html-elements/)
 - [Native form elements](http://nativeformelements.com)
 
@@ -20,3 +20,11 @@ This repo contains an HTML page with all HTML5 elements and a style switcher ([l
 ## See also
 
 - [Drop-in switcher for previewing minimal CSS frameworks](https://github.com/dohliam/dropin-minimal-css)
+- [HTML5 Test Page](https://github.com/cbracco/html5-test-page)
+- [Awesome CSS Frameworks](https://github.com/troxler/awesome-css-frameworks)
+
+## License
+
+License [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/):
+
+> You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
