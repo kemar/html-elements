@@ -1,6 +1,6 @@
 # How various CSS frameworks style bare HTML elements
 
-This repo contains an HTML page with all HTML5 elements for styling. I added a style switcher ([like it's 2001](https://alistapart.com/article/alternate)) to dynamically switch between the style sheets of various CSS frameworks and studying how they deal with HTML elements.
+This repo contains an HTML page with all HTML5 elements and a style switcher ([like it's 2001](https://alistapart.com/article/alternate)) for previewing various CSS frameworks.
 
 ## Inspiration
 
@@ -20,9 +20,3 @@ This repo contains an HTML page with all HTML5 elements for styling. I added a s
 ## See also
 
 - [Drop-in switcher for previewing minimal CSS frameworks](https://github.com/dohliam/dropin-minimal-css)
-
-## TODO
-
-- `MathML`
-- `SVG`
-- `Canvas`
